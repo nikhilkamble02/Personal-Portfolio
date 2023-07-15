@@ -605,6 +605,14 @@ header .navbar ul li a:hover {
     box-shadow: 0px 5px 20px rgb(13, 127, 140);
 }
 
+.skills .box-container #bootstrapbox {
+    box-shadow: 0px 5px 10px rgb(46, 42, 153);
+}
+
+.skills .box-container #bootstrapbox:hover {
+    box-shadow: 0px 5px 20px rgb(46, 42, 153);
+}
+
 .skills .box-container #canvabox {
     box-shadow: 0px 5px 10px rgb(13, 127, 140);
 }
@@ -692,6 +700,10 @@ header .navbar ul li a:hover {
 #tailwind {
     transform: scale(1.2);
 }
+#bootstrap{
+    transform: scale(.8);
+}
+
 
 #canva {
     transform: scale(.95);
