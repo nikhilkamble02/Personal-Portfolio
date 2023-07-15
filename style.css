@@ -321,11 +321,12 @@ header .navbar ul li a:hover {
 }
 
 .projects .box-container .box {
-    height: 45rem;
+    height: 55rem;
     width: 32rem;
     border-radius: 3rem;
     /* min-height: fit-content; */
     margin: 2rem;
+    margin-bottom:3rem;
     /* overflow: hidden; */
     cursor: pointer;
     /* border: 2px solid yellow; */
