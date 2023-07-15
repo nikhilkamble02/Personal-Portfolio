@@ -458,8 +458,8 @@ header .navbar ul li a:hover {
 }
 
 .skills .box-container .box {
-    height: 15rem;
-    width: 13rem;
+    height: 12rem;
+    width: 10rem;
     background-color: #212121;
     /* border-radius: 50%; */
     margin: 2rem;
