@@ -388,7 +388,8 @@ header .navbar ul li a:hover {
 
 
 
-.links {
+.links 
+{
     display: flex;
     justify-content: space-around;
     height: 7vh;
