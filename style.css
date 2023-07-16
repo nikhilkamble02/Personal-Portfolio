@@ -65,7 +65,8 @@ section {
 }
 
 .btn:hover {
-    background-color: #ffe072;
+  background-color: #595855;
+    transform: scale(1.02);
 }
 
 .heading {
@@ -174,7 +175,8 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
-    background-color: #ffe072;
+     background-color: #595855;
+    transform: scale(1.02);
 }
 
 #menu {
