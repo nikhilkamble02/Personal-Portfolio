@@ -2,381 +2,429 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- font awesome cdn link -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
-
-    <title>Nikhil's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
+  <nav id="desktop-nav">
+    <div class="logo">Nikhil Kamble</div>
+    <!-- <button class="theme">Theme</button> -->
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Nikhil Kamble</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#blogs" onclick="toggleMenu()">Blogs</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img id="profile1" src="./assets/profile-pic.jpg" alt="Nikhil Kamble's profile picture" title="Nikhil Kamble" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Nikhil Kamble</h1>
+      <p class="section__text__p2">Frontend Developer</p>
+      <div class="btn-container">
+        <a href="https://drive.google.com/file/d/1pJ4HQvWC0Om8fN7pmMfsA0HRdBR7kOWI/view?usp=sharing" target="_blank">
+          <button class="btn btn-color-2">
+            See Resume
 
-    <!-- header section -->
-    <header>
-        <div class="user">
-            <img src="images/nikhil.jpeg" alt="Nikhil's Image">
-            <h3 class="name">Nikhil Kamble</h3>
-            <p class="post">Frontend Developer</p>
-            <div class="connection">
-                <a href="https://github.com/nikhilkamble02" class="icon" target="_blank" title="GitHub"> <i
-                        class="fa fa-github"></i></a>
-                <a href="mailto:nikhilk7214@gmail.com" class="icon"> <i class="fas fa-envelope"
-                        title="Send me Email"></i></a>
-                <a href="https://www.linkedin.com/in/nikhilkamble-/" class="icon" target="_blank"
-                    title="LinkedIn Profile"> <i class="fa fa-linkedin"></i></a>
-                <a href="https://twitter.com/Nikhil_7378" class="icon" target="_blank"> <i class="fa fa-twitter"
-                        title="Twitter Profile"></i></a>
+          </button>
+        </a>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <a target="_blank" href='https://www.linkedin.com/in/nikhilkamble-/'>
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
+        </a>
 
-
-            </div>
+        <a target="_blank" href="https://github.com/nikhilkamble02">
+          <img src="./assets/github.png" alt="My Github profile" class="icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title" id="aboutTitle">About Me</h1>
+    <div class="section-container">
+      <!-- <div class="section__pic-container_2">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div> -->
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Educational Experience</h3>
+            <p>1.5+ years <br />Frontend Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Bachelor of Computer Application<br /><i>(Pursuing Last Year)</i></p>
+          </div>
         </div>
+        <div class="text-container">
+          <p><span class="highlight"></span>
+            I'm <span class="highlight">Frontend Developer</span> from Maharashtra, India, I build apps with a focus on
+            <span class="highlight">JavaScript React & Redux</span> considering
+            all the aspects of <span class="highlight">UI/UX</span> . I enjoy turning complex problems into simple,
+            beautiful and intuitive designs. <br> A
+            <span class="highlight">Software Engineer</span> , who loves to solve problems.
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <!-- <li><a href="#contact">Contact</a></li> -->
-            </ul>
-        </nav>
-
-    </header>
-
-    <!-- header ends -->
-
-    <div id="menu" class="fas fa-bars"></div>
-
-    <!-- home section start -->
-    <section class="home" id="home">
-        <h3>Hi There 👋🏼!</h3>
-        <h1>I'm <span>Nikhil Kamble</span></h1>
-        <p>A Web developer and JavaScript enthusiast with an intense curiosity about all aspects of web development area
-            as well as the ability to learn new stuffs in any area related to innovative technology, creating websites
-            and applications.
-        </p>
-
-        <!-- <a href="#about"><button class="btn">About me <i class="fa fa-github"></i></button></a> -->
-        <!-- <div class="connection">
-            <a href="https://github.com/nikhilkamble02" class="icon" target="_blank" title="GitHub"> <i
-                    class="fa fa-github"></i></a>
-            <a href="mailto:nikhilk7214@gmail.com" class="icon"> <i class="fas fa-envelope"
-                    title="Send me Email"></i></a>
-            <a href="https://www.linkedin.com/in/nikhilkamble-/" class="icon" target="_blank" title="LinkedIn Profile">
-                <i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/Nikhil_7378" class="icon" target="_blank"> <i class="fa fa-twitter"
-                    title="Twitter Profile"></i></a>
-
-
-        </div> -->
-
-    </section>
-    <!-- home section end -->
-
-    <!-- about section start  -->
-
-    <section class="about" id="about">
-        <h1 class="heading"><span>About</span> me</h1>
-        <div class="row">
-            <div class="info">
-                <h3><span>I'm <span class="highlight">Frontend Developer</span> from Maharashtra, India, I build apps
-                        with a focus on <span class="highlight">React & JavaScript</span> considering all the aspects of<span class="highlight"> UI/UX.</span> I enjoy turning complex problems into simple, beautiful and intuitive
-                        designs. A
-                        Software Engineer, who loves to solve problems.
-
-                        <br><br>
-                        I am having an experience of building <span class="highlight">
-                            high-performing, responsive, beautiful web applications
-                        </span> to
-                        deliver a unique, intuitive user experience that works, also keen interest in UI/UX with some
-                        nice designing skills. I am a well-trained teammate who loves to share ideas and prioritizes
-                        communication in order to achieve goals within the set deadlines. I enjoy being challenged and
-                        working on projects that require me to step outside of my comfort zone.</h3>
-                <!-- <a href="resume/My Resume.pdf" download><button class="btn">Resume <i class="fas fa-download"></i></button></a> -->
-                <a href="https://drive.google.com/file/d/1pJ4HQvWC0Om8fN7pmMfsA0HRdBR7kOWI/view?usp=sharing"
-                    target="_blank"><button class="btn">See Resume <i class="fas fa-user"></i></button></a>
-            </div>
-            <!-- <div class="counter">
-                <div class="box">
-                    <span>100+</span>
-                    <h3>projects completed</h3>
-                </div>
-
-                <div class="box">
-                    <span>100+</span>
-                    <h3>happy clinet</h3>
-                </div>
-
-                <div class="box">
-                    <span>10+</span>
-                    <h3>awards</h3>
-                </div>
-            </div> -->
-
+            I am having an experience of building high-performing, responsive, beautiful web applications to deliver a
+            unique, intuitive user experience that works, also <span class="highlight"> keen interest in UI/UX</span>
+            with some nice designing skills. <br> I
+            am a well-trained teammate who loves to share ideas and prioritizes communication in order to achieve goals
+            within the set deadlines. I enjoy being challenged and working on projects that require me to step outside
+            of my comfort zone.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML5</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS3</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Redux</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <!-- <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>TypeScript</h3>
+                <i>Basic</i>
+                <p>Intermediate</p>
+              </div>
+            </article> -->
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Tailwind </h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bootstrap </h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
 
+            <!-- <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React</h3>
+                <p>Basic</p>
+              </div>
+            </article> -->
 
-
-    <!-- about section end -->
-
-    <!-- project section start  -->
-
-    <section class="projects" id="projects">
-        <h1 class="heading">My <span>Projects</span></h1>
-
-        <div class="box-container">
-            <div class="box" id="box-1">
-                <div>
-                    <img src="images/projects/weather.png" alt="">
-                </div>
-
-                <div class="links">
-                    <p> <a href="https://weather-api-by-nikhil.netlify.app/" target="_blank">Demo</a></p>
-                    <p> <a href="https://github.com/nikhilkamble02/Weather-Informer" target="_blank">Github</a></p>
-                </div>
-                <div class="projdesc">
-                    <h2>Weather Informer</h2>
-                    <div class="techStack">HTML5, CSS3, JavaScript, Weather API</div>
-<!--                     <p>Get live weather information of any locatioin</p> -->
-                </div>
-
-            </div>
-            <div class="box" id="box-2">
-                <div>
-                    <img src="images/projects/drum kit.png" alt="">
-                </div>
-                <div class="links">
-                    <p> <a href="https://drum-kit-js-nk.netlify.app/" target="_blank">Demo</a></p>
-                    <p> <a href="https://github.com/nikhilkamble02/Js-drum-kit">Github</a></p>
-                </div>
-                <div class="projdesc">
-                    <h2>Drum Kit </h2>
-                    <div class="techStack">HTML5, CSS3, JavaScript</div>
-<!--                     <p> It can be handled using home row keys on your keyboard. Every alphabet on home row produces a
-                        sounds as soon as you click it
-                    </p> -->
-                </div>
-
-            </div>
-            <div class="box" id="box-3">
-                <div>
-                    <img src="images/projects/portfolio1.png" alt="">
-                </div>
-                <div class="links">
-                    <p> <a href="#home">Demo</a></p>
-                    <p> <a href="https://github.com/nikhilkamble02/Personal-Portfolio" target="_blank">Github</a></p>
-                </div>
-                <div class="projdesc">
-                    <h2>Personal Portfolio</h2>
-                    <div class="techStack">HTML5, CSS3, JavaScript</div>
-<!--                     <p>This is my personal portfolio site which contains all my work, my projects , skills, blogs and
-                        contact, so that I can present myself in a special and interactive way to Hiring Managers
-                        and Recruiters</p> -->
-                </div>
-
-            </div>
-
-
-            <!-- <div class="box">
-                <img src="images/projects/proj-2.jpeg" alt="">
-            </div>
-
-            <div class="box">
-                <img src="images/projects/proj-3.jpeg" alt="">
-            </div> -->
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Material UI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
-
-
-
-    <!-- project section end  -->
-
-
-
-
-    <!-- skills section start  -->
-
-    <section class="skills" id="skills">
-        <h1 class="heading">My <span>Skills</span></h1>
-
-        <div class="box-container">
-            <div class="box" id="htmlbox">
-                <img id="html" src="images/skills/html.png" alt="" title="HTML">
-                <span>HTML</span>
-
-            </div>
-            <div class="box" id="cssbox">
-                <img id="css" src="images/skills/css-3.png" alt="" title="CSS">
-            </div>
-
-            <div class="box" id="jsbox">
-                <img id="js" src="images/skills/js.png" alt="" title="JavaScript">
-            </div>
-
-            <div class="box" id="reactbox">
-                <img id="react" src="images/skills/react.png" alt="" title="ReactJs">
-            </div>
-
-            <div class="box" id="tailwindbox">
-                <img id="tailwind" src="images/skills/tailwind.png" alt="" title="Tailwind">
-            </div>
-
-            <div class="box" id="bootstrapbox">
-                <img id="bootstrap" src="images/skills/bootstrap.png" alt="" title="Tailwind">
-            </div>
-
-
-            <div class="box" id="canvabox">
-                <img id="canva" src="images/skills/canva.png" alt="" title="Canva">
-            </div>
-
-            <div class="box" id="figmabox">
-                <img id="figma" src="images/skills/figma.png" alt="" title="Figma">
-            </div>
-
-            <div class="box" id="gitbox">
-                <img id="git" src="images/skills/git.jpg" alt="" title="Git">
-            </div>
-
-            <div class="box" id="githubbox">
-                <img id="github" src="images/skills/github.png" alt="" title="GitHub">
-            </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Development Tools & Softwares</h2>
+          <div class="article-container">
+            <!-- <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Basic</p>
+              </div>
+            </article> -->
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GitHub</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Figma</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Canva</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Netlify</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article id="lastSkill">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>VS Code</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <!-- <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Express JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article> -->
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
 
+  <!-- project section  -->
 
-
-    <!-- skills section end  -->
-
-    <!-- blog section start  -->
-
-
-    <section class="blogs" id="blogs">
-        <h1 class="heading">My <span>Blogs</span></h1>
-
-        <div class="blog-container">
-            <div class="blog" id="blog-1">
-                <div>
-                    <a href="https://medium.com/@kamblenikhil7378/higher-order-array-methods-in-javascript-787e2e70a870"
-                        target="_blank">
-                        <img src="images/blogs/blog-1.jpg" alt="" title="Click to Open">
-                    </a>
-                </div>
-
-                <!-- <div class="links">
-                    <p> <a href="https://weather-api-by-nikhil.netlify.app/" target="_blank">Demo</a></p>
-                    
-                </div> -->
-                <div class="blogdesc">
-                    <h2><a href="https://medium.com/@kamblenikhil7378/higher-order-array-methods-in-javascript-787e2e70a870"
-                            target="_blank">"Higher order array methods in JavaScript"</a></h2>
-                    <!-- <div class="techStack">HTML5, CSS3, JavaScript, Weather API</div> -->
-                    <p>This blog contains a detailed explanation about which are Higher order array methods in JavaScript.
-                        </p>
-                </div>
-
-            </div>
-            <div class="blog" id="blog-2">
-                <div>
-                    <a href="https://medium.com/@kamblenikhil7378/when-to-use-em-rem-css-units-820dda4ab680"
-                        target="_blank">
-                        <img src="images/blogs/blog-2.png" alt="" title="Click to Open">
-                    </a>
-                </div>
-                <!-- <div class="links">
-                    <p> <a href="">Demo</a></p>
-                    <p> <a href="">Github</a></p>
-                </div> -->
-                <div class="blogdesc">
-                    <h2><a href="https://medium.com/@kamblenikhil7378/when-to-use-em-rem-css-units-820dda4ab680"
-                            target="_blank">"When to use em , rem css units"</a></h2>
-                    <!-- <div class="techStack">HTML5, CSS3, JavaScript</div>  -->
-                    <p>In this blog, there is a detailed explanation with practical examples about when to use 'em' and
-                        'rem' css units . </p>
-                </div>
-
-            </div>
-            <!-- <div class="blog" id="blog-3">
-                <div>
-                    <img src="images/projects/proj-3.jpeg" alt="">
-                </div>
-                <div class="links">
-                    <p> <a href="">Demo</a></p>
-                    <p> <a href="">Github</a></p>
-                </div>
-                <div class="blogdesc">
-                    <h2><a href="">blog-3</a></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque officia nemo modi
-                        laudantium voluptas mollitia repudiandae iste assumenda, pariatur eligendi molestias? Nulla,
-                        atque alias a tenetur aperiam quaerat aut!</p>
-                </div>
-
-            </div> -->
-
-
-            <!-- <div class="box">
-                <img src="images/projects/proj-2.jpeg" alt="">
-            </div>
-
-            <div class="box">
-                <img src="images/projects/proj-3.jpeg" alt="">
-            </div> -->
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/projects/weather.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Live Weather</h2>
+          <div class="btn-container">
+           <a href="https://github.com/nikhilkamble02/Weather-Informer" target="_blank">
+            <button class="btn btn-color-2 project-btn" >
+              Github
+            </button>
+           </a>
+         <a target="_blank" href="https://weather-api-by-nikhil.netlify.app/">
+          <button class="btn btn-color-2 project-btn" >
+            Live Demo
+          </button>
+         </a>
+          </div>
         </div>
-    </section>
-    <!-- blog section end -->
-
-    <!-- contact section start  -->
-
-    <!-- <section class="contact" id="contact">
-        <h1 class="heading"><span>Contact</span> me</h1>
-        <div class="row">
-            <div class="content">
-                <h3 class="title">Contact info</h3>
-
-                <div class="info">
-                    <h3><a href=""><i class="fas fa-envelope"></i>nikhilk7214@gmail.com</a></h3>
-
-                    <h3><i class="fas fa-phone"></i>+91 737******* </h3>
-
-                    <h3><i class="fas fa-map-marker-alt"></i>Latur (MH) , India </h3>
-                </div>
-            </div>
-            <form action="">
-                <input type="text" placeholder="Name" class="box">
-
-                <input type="email" placeholder="Email" class="box">
-
-                <input type="text" placeholder="project" class="box">
-                <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
-                <button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i></button>
-            </form>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/projects/box shadow.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title" style="font-size: 1.2rem;">Box Shadow Generator Chrome Extension</h2>
+          <div class="btn-container">
+            <button  class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button disabled  class="btn btn-color-2 project-btn">
+              Live Demo
+            </button>
+          </div>
         </div>
-    </section> -->
-    <!-- contact section end  -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/projects/portfolio1.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Personal Portfolio</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
 
-    <!-- scroll top btn  -->
-    <!-- <a href="#home" class="top">
-    <img src="./images/projects/scoll-top.png" alt="">
-</a> -->
 
 
-    <!-- jquery cdn link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
-    <script src="main.js"></script>
 
+  </section>
+
+  <!-- blog section  -->
+  <section id="blogs">
+    <p class="section__text__p1">Have a Look on My Recent</p>
+    <h1 class="title">Blogs</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/blogs/blog-1.jpg" alt="Project 1" class="blog-img" />
+          </div>
+          <h2 class="experience-sub-title project-title" style="font-size:1.55rem ;">"Higher order array methods in JavaScript"</h2>
+          <div class="btn-container">
+           <a target="_blank" href="https://medium.com/@kamblenikhil7378/higher-order-array-methods-in-javascript-787e2e70a870">
+            <button class="btn btn-color-2 project-btn" >
+              Read
+            </button>
+           </a>
+            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/blogs/blog-2.png" alt="Project 2" class="blog-img" />
+          </div> 
+          <h2 class="experience-sub-title project-title">When to Use em, rem CSS units</h2>
+          <div class="btn-container">
+            <a target="_blank" href="https://medium.com/@kamblenikhil7378/when-to-use-em-rem-css-units-820dda4ab680">
+              <button class="btn btn-color-2 project-btn" >
+                Read
+              </button>
+            </a>
+            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/blogs/css variables.jpg" alt="Project 3" class="blog-img" />
+          </div>
+          
+          <h2 class="experience-sub-title project-title">CSS Variables Explained in Details</h2>
+          <div class="btn-container">
+           <a target="_blank" href="https://medium.com/@kamblenikhil7378/css-variables-a23d6f894e2a">
+            <button class="btn btn-color-2 project-btn" >
+              Read
+            </button>
+           </a>
+            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+
+
+  <!-- contact section  -->
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:nikhilk7214@gmail.com">nikhilk7214@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a target="_blank" href="https://www.linkedin.com/in/nikhilkamble-/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section  -->
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 @Nikhil Kamble. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
